@@ -4,23 +4,21 @@
 <div id="neck"></div>
 <script>
 const neck = document.getElementById('neck')
-let c = 1
-function img(a = 50) {
+function img(a) {
 	for (let i = 0; i < a; i++) {
 		const img = document.createElement('img')
 		img.src = 'neck.png'
 		img.loading = 'lazy'
 		img.style.display = 'block'
 		neck.appendChild(img)
-		c++ //omg c plus plus
 	}
 }
 
-img(5)
+img(50)
 
 window.addEventListener("scroll", () => {
 	if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 500) {
-		img(5)
+		img(50)
 	}
 })
 </script>
