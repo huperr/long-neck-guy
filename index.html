@@ -1,0 +1,26 @@
+<h1>long neck guy.</h1>
+<p>"i am the long neck guy. you will never see my &lt;body&gt;."</p>
+<img src="head.png" style="position: absolute; left: -11px">
+<div id="neck"></div>
+<script>
+const neck = document.getElementById('neck')
+let c = 1
+function img(a = 50) {
+	for (let i = 0; i < a; i++) {
+		const img = document.createElement('img')
+		img.src = 'neck.png'
+		img.loading = 'lazy'
+		img.style.display = 'block'
+		neck.appendChild(img)
+		c++ //omg c plus plus
+	}
+}
+
+img(5)
+
+window.addEventListener("scroll", () => {
+	if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 500) {
+		img(5)
+	}
+})
+</script>
